@@ -1,0 +1,70 @@
+﻿@page
+@model Mission09_BookStore.Pages.CartModel
+@{
+}
+<!-- I added the new boostrap items here the first is table formatting then the second is adding badges next to the new items -->
+<h2>Your cart</h2>
+
+<!--I added the table being dark and that the background changes to a light grey when the user hoevers over an item-->
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>Book</th>
+            <th>Quantity</th>
+            <td>Cost</td>
+            <th>Subtotal</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @for (int i = 0; i < Model.basket.Items.Count; i++)
+        {
+            @if (i == Model.basket.Items.Count - 1)
+            {
+                <!-- I added an if statement that uses bootstrap that shows the newest item added to the cart using a bootstrap badge that says new -->
+                <tr>
+                    <td>@Model.basket.Items[i].Book.Title<span class="badge badge-secondary p-1 m-1">New</span></td>
+                    <td>@Model.basket.Items[i].Quantity</td>
+                    <td>@Model.basket.Items[i].Book.Price</td>
+                    <td>@(Model.basket.Items[i].Quantity * Model.basket.Items[i].Book.Price)</td>
+
+                    <td class="text-center">
+                        <form method="post" asp-page-handler="Remove">
+                            <input type="hidden" name="bookId" value="@Model.basket.Items[i].Book.BookId"/>
+                            <input type="hidden" name="returnUrl" value="@Model.ReturnUrl"/>
+                            <button type="submit" class="btn btn-sm btn-danger">Remove</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+            else
+            {
+                <tr>
+                    <td>@Model.basket.Items[i].Book.Title</td>
+                    <td>@Model.basket.Items[i].Quantity</td>
+                    <td>@Model.basket.Items[i].Book.Price</td>
+                    <td>@(Model.basket.Items[i].Quantity * Model.basket.Items[i].Book.Price)</td>
+
+                    <td class="text-center">
+                        <form method="post" asp-page-handler="Remove">
+                            <input type="hidden" name="bookId" value="@Model.basket.Items[i].Book.BookId" />
+                            <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
+                            <button type="submit" class="btn btn-sm btn-danger">Remove</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total:</td>
+                <td>@Model.basket.CalculateTotal().ToString("c")</td>
+            </tr>
+        </tfoot>
+    </table>
+
+<div>
+    <a class="btn btn-primary" href="@Model.ReturnUrl">Continue Shopping</a>
+    <a class="btn btn-primary" asp-controller="Checkout" asp-action="Checkout">Checkout</a>
+</div>
