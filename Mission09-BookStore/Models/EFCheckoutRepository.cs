@@ -6,6 +6,8 @@ namespace Mission09_BookStore.Models
 {
 	public class EFCheckoutRepository : ICheckoutRepository
 	{
+
+		// This is an extension of the ICheckoutRepository that does the actual saving of the carts to the database
 		private BookstoreContext context { get; set; }
 
 		public EFCheckoutRepository (BookstoreContext temp)

@@ -1,0 +1,44 @@
+﻿<Properties StartupConfiguration="{455D8D00-9BBA-4A47-A9B2-F29709E66137}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Mission09-BookStore/Models/ICheckoutRepository.cs">
+    <Files>
+      <File FileName="Mission09-BookStore/Controllers/CheckoutController.cs" Line="45" Column="14" />
+      <File FileName="Mission09-BookStore/Models/Checkout.cs" Line="1" Column="1" />
+      <File FileName="Mission09-BookStore/Models/ICheckoutRepository.cs" Line="11" Column="10" />
+      <File FileName="Mission09-BookStore/Models/EFCheckoutRepository.cs" Line="25" Column="5" />
+      <File FileName="Mission09-BookStore/Startup.cs" Line="1" Column="1" />
+      <File FileName="Mission09-BookStore/Models/BookstoreBooksRepository.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Mission09-BookStore" expanded="True">
+            <Node name="Mission09-BookStore" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="ICheckoutRepository.cs" selected="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Checkout" expanded="True" />
+                <Node name="Shared" expanded="True">
+                  <Node name="Components" expanded="True">
+                    <Node name="CartSummary" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Mission09-BookStore PreferredExecutionTarget="/Applications/Brave Browser.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

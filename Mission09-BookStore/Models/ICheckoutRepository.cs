@@ -4,8 +4,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Mission09_BookStore.Models
 {
-	public class ICheckoutRepository
+	public interface ICheckoutRepository
 	{
+
+		// This is an interface that is then implemented by the EFCheckoutRepository
 		IQueryable<Checkout> Checkouts { get; }
 
 		public void SaveCheckout(Checkout checkout)

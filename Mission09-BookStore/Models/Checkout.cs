@@ -7,6 +7,7 @@ namespace Mission09_BookStore.Models
 {
 	public class Checkout
 	{
+		// This is the checkout class that contains all the user details and cart information
 		[Key]
 		[BindNever]
 		public int CartId { get; set; }

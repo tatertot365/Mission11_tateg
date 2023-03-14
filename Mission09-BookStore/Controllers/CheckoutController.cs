@@ -9,6 +9,7 @@ using Mission09_BookStore.Models;
 
 namespace Mission09_BookStore.Controllers
 {
+    // This controller manages the checkout process and throws errors and saves baskets to the database
     public class CheckoutController : Controller
     {
         private ICheckoutRepository repo { get; set; }
